@@ -1,0 +1,133 @@
+
+#canvas{
+	background: #272A2A;
+}
+#main-toolbar #activity-button {
+  background-image: url(../activity/activity.svg);
+}
+.toolbar{
+	//background:rgb(137, 200, 223);
+	background: rgb(77, 147, 140)
+}
+#playground1{
+//background: rgb(16, 15, 19);	
+position:absolute;
+right:4%;
+//left:4%;
+top:7%;
+}
+
+#playground2{
+//background: rgb(16, 15, 19);	
+position:absolute;
+//right:4%;
+//top:7%;
+}
+
+
+.buttons{
+
+//height: 45px;
+padding-top: 5px;
+background-color: #87DFCC;
+border: 2px blue solid;
+border-radius: 10px;
+text-align: center;
+font-family: Georgia, "Times New Roman", Times, serif;
+//font-size: 18px;
+color: red;
+cursor: default;
+  //height:25px;
+  //width:100px;
+  float: right;
+}
+#stop_wheel{
+font-size: 18px;
+height:25px;
+width:100px;
+}
+#spokeP {
+font-size: 25px;
+font-weight: bold;
+height:25px;
+width:50px;
+}
+#spokeM {
+height: 25px;
+width: 50px;
+font-size: 25px;
+font-weight: bold;	
+}
+#speedP {
+height: 25px;
+width: 50px;
+font-size: 20px;
+font-weight: bold;
+
+}
+#speedM {
+height: 25px;
+width: 50px;
+font-size: 20px;
+font-weight: bold;
+}
+#dropmasses{
+position: absolute;
+top: 10px;
+left: 15px;
+width: 100px;
+font-size: 20px;
+font-weight: bold;
+}
+
+#resetmasses{
+position: absolute;
+top: 10px;
+left: 125px;
+width: 100px;
+font-size: 20px;
+font-weight: bold;
+}
+
+#massAP{
+position: absolute;
+top: 10px;
+left: 250px;
+width: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+#massAM{
+position: absolute;
+top: 40px;
+left: 250px;
+width: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+#massBP{
+	position: absolute;
+top: 10px;
+left: 350px;
+width: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+#massBM{
+	position: absolute;
+top: 40px;
+left: 350px;
+width: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+#planet{
+
+position: absolute;
+top: 10px;
+left: 550px;
+width: 100px;
+font-size: 20px;
+font-weight: bold;
+
+}
