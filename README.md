@@ -11,7 +11,7 @@ Physics_JS is a learning platform for kids. It is a JS port of sugarlabs physics
 <p>Academics:Kids can search their physics courses/chapters in Physics_JS. </p>  
 </code>
 <br>
-**Ideas that has to be tried as part of implementation details ** <br>
+**Ideas that has to be tried as part of implementation details**  <br>
 <p>Build a catapult to simulate Angry Birds </p>
 <p>Build a machine that sorts different sized balls in to two buckets, large and small, with no ball jams.</p>
 <p>A cyclic mechanism for lifting balls from the bottom of the screen to the top, again and again.</p>
