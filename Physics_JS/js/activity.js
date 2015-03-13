@@ -57,6 +57,12 @@ var polySide = 10,
 
     current_planet=planets[i_planet];
 
+var LeftPulleyX = 500,
+	RightPulleyX = 700,
+	PulleyY = 105,
+	PulleySize = 40,
+	angulardisplacement = 0;    
+
 
 
 
@@ -179,8 +185,67 @@ function drawMass2(){
     ctx2.textAlign='center';
     ctx2.fillText(m2.mass+'kg',m2.x,m2.y);
 
+}
 
- }
+/* Creating Two Pulleys  */
+function DrawPulleys(){
+	ctx2.lineWidth = 10;
+	//ctx2.strokeStyle = "#000000";
+	ctx2.strokeStyle='#1D142F'
+	ctx2.save();
+	ctx2.translate(LeftPulleyX, PulleyY);
+	ctx2.rotate(angulardisplacement);
+	ctx2.beginPath();
+	ctx2.arc(0, 0, PulleySize, 0, 2*Math.PI);
+	ctx2.moveTo(0, 0-PulleySize);
+	ctx2.lineTo(0, 0+PulleySize);
+	ctx2.moveTo(0-PulleySize, 0);
+	ctx2.lineTo(0+PulleySize, 0);
+	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.cos(Math.PI/4));
+	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.cos(Math.PI/4));
+	ctx2.stroke();
+	ctx2.closePath();
+	ctx2.restore();
+	
+	ctx2.save();
+	ctx2.translate(RightPulleyX, PulleyY);
+	ctx2.rotate(angulardisplacement);
+	ctx2.beginPath();
+	ctx2.arc(0, 0, PulleySize, 0, 2*Math.PI);
+	ctx2.moveTo(0, 0-PulleySize);
+	ctx2.lineTo(0, 0+PulleySize);
+	ctx2.moveTo(0-PulleySize, 0);
+	ctx2.lineTo(0+PulleySize, 0);
+	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.cos(Math.PI/4));
+	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.cos(Math.PI/4));
+	ctx2.stroke();
+	ctx2.closePath();
+	ctx2.restore();
+	
+	//ctx2.fillStyle = "#000000";
+	ctx2.fillStyle="#242C2C";
+	ctx2.fillRect(LeftPulleyX-.1*PulleySize, PulleyY-0.3*PulleySize, 1.3*PulleySize, 0.6*PulleySize);
+	ctx2.fillRect(RightPulleyX-1.2*PulleySize, PulleyY-0.3*PulleySize, 1.3*PulleySize, 0.6*PulleySize);
+	ctx2.fillRect(LeftPulleyX+1.2*PulleySize, PulleyY-0.15*PulleySize, RightPulleyX - LeftPulleyX - 1.4*PulleySize, 0.3*PulleySize);
+	
+	ctx2.fillStyle = "#c0c0c0";
+	ctx2.beginPath();
+	ctx2.arc(LeftPulleyX, PulleyY, 4, 0, 2*Math.PI);
+	ctx2.closePath();
+	ctx2.fill();
+	ctx2.beginPath();
+	ctx2.arc(RightPulleyX, PulleyY, 4, 0, 2*Math.PI);
+	ctx2.closePath();
+	ctx2.fill();
+
+}
+
+
+
 
 
 /* Draw Planet Surface */
@@ -282,6 +347,7 @@ function resetPhysics(){
 /* Invoke functions.. */
 wheel_timer=setInterval(render,angularVelo);
 drawPlay2();
+DrawPulleys();
 /*End of calling functions */
 
 
