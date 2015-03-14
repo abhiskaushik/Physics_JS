@@ -57,10 +57,10 @@ var polySide = 10,
 
     current_planet=planets[i_planet];
 
-var LeftPulleyX = 500,
-	RightPulleyX = 700,
-	PulleyY = 105,
-	PulleySize = 40,
+var pulley1_X = 500,
+	Pulley2_X = 700,
+	pulley_Y = 105,
+	pulley_dist = 40,
 	angulardisplacement = 0;    
 
 
@@ -193,52 +193,52 @@ function DrawPulleys(){
 	//ctx2.strokeStyle = "#000000";
 	ctx2.strokeStyle='#1D142F'
 	ctx2.save();
-	ctx2.translate(LeftPulleyX, PulleyY);
+	ctx2.translate(pulley1_X, pulley_Y);
 	ctx2.rotate(angulardisplacement);
 	ctx2.beginPath();
-	ctx2.arc(0, 0, PulleySize, 0, 2*Math.PI);
-	ctx2.moveTo(0, 0-PulleySize);
-	ctx2.lineTo(0, 0+PulleySize);
-	ctx2.moveTo(0-PulleySize, 0);
-	ctx2.lineTo(0+PulleySize, 0);
-	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.sin(Math.PI/4));
-	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.cos(Math.PI/4));
-	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.sin(Math.PI/4));
-	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.cos(Math.PI/4));
+	ctx2.arc(0, 0, pulley_dist, 0, 2*Math.PI);
+	ctx2.moveTo(0, 0-pulley_dist);
+	ctx2.lineTo(0, 0+pulley_dist);
+	ctx2.moveTo(0-pulley_dist, 0);
+	ctx2.lineTo(0+pulley_dist, 0);
+	ctx2.moveTo(0-pulley_dist*Math.cos(Math.PI/4), 0-pulley_dist*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+pulley_dist*Math.cos(Math.PI/4), 0+pulley_dist*Math.cos(Math.PI/4));
+	ctx2.moveTo(0-pulley_dist*Math.cos(Math.PI/4), 0+pulley_dist*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+pulley_dist*Math.cos(Math.PI/4), 0-pulley_dist*Math.cos(Math.PI/4));
 	ctx2.stroke();
 	ctx2.closePath();
 	ctx2.restore();
 	
 	ctx2.save();
-	ctx2.translate(RightPulleyX, PulleyY);
+	ctx2.translate(pulley1_X, pulley_Y);
 	ctx2.rotate(angulardisplacement);
 	ctx2.beginPath();
-	ctx2.arc(0, 0, PulleySize, 0, 2*Math.PI);
-	ctx2.moveTo(0, 0-PulleySize);
-	ctx2.lineTo(0, 0+PulleySize);
-	ctx2.moveTo(0-PulleySize, 0);
-	ctx2.lineTo(0+PulleySize, 0);
-	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.sin(Math.PI/4));
-	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.cos(Math.PI/4));
-	ctx2.moveTo(0-PulleySize*Math.cos(Math.PI/4), 0+PulleySize*Math.sin(Math.PI/4));
-	ctx2.lineTo(0+PulleySize*Math.cos(Math.PI/4), 0-PulleySize*Math.cos(Math.PI/4));
+	ctx2.arc(0, 0, pulley_dist, 0, 2*Math.PI);
+	ctx2.moveTo(0, 0-pulley_dist);
+	ctx2.lineTo(0, 0+pulley_dist);
+	ctx2.moveTo(0-pulley_dist, 0);
+	ctx2.lineTo(0+pulley_dist, 0);
+	ctx2.moveTo(0-pulley_dist*Math.cos(Math.PI/4), 0-pulley_dist*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+pulley_dist*Math.cos(Math.PI/4), 0+pulley_dist*Math.cos(Math.PI/4));
+	ctx2.moveTo(0-pulley_dist*Math.cos(Math.PI/4), 0+pulley_dist*Math.sin(Math.PI/4));
+	ctx2.lineTo(0+pulley_dist*Math.cos(Math.PI/4), 0-pulley_dist*Math.cos(Math.PI/4));
 	ctx2.stroke();
 	ctx2.closePath();
 	ctx2.restore();
 	
 	//ctx2.fillStyle = "#000000";
 	ctx2.fillStyle="#242C2C";
-	ctx2.fillRect(LeftPulleyX-.1*PulleySize, PulleyY-0.3*PulleySize, 1.3*PulleySize, 0.6*PulleySize);
-	ctx2.fillRect(RightPulleyX-1.2*PulleySize, PulleyY-0.3*PulleySize, 1.3*PulleySize, 0.6*PulleySize);
-	ctx2.fillRect(LeftPulleyX+1.2*PulleySize, PulleyY-0.15*PulleySize, RightPulleyX - LeftPulleyX - 1.4*PulleySize, 0.3*PulleySize);
+	ctx2.fillRect(pulley1_X-.1*pulley_dist, pulley_Y-0.3*pulley_dist, 1.3*pulley_dist, 0.6*pulley_dist);
+	ctx2.fillRect(pulley2_X-1.2*pulley_dist, pulley_Y-0.3*pulley_dist, 1.3*pulley_dist, 0.6*pulley_dist);
+	ctx2.fillRect(pulley1_X+1.2*pulley_dist, pulley_Y-0.15*pulley_dist, pulley2_X - pulley1_X - 1.4*pulley_dist, 0.3*pulley_dist);
 	
 	ctx2.fillStyle = "#c0c0c0";
 	ctx2.beginPath();
-	ctx2.arc(LeftPulleyX, PulleyY, 4, 0, 2*Math.PI);
+	ctx2.arc(Pulley1_X, pulley_Y, 4, 0, 2*Math.PI);
 	ctx2.closePath();
 	ctx2.fill();
 	ctx2.beginPath();
-	ctx2.arc(RightPulleyX, PulleyY, 4, 0, 2*Math.PI);
+	ctx2.arc(Pulley2_X, pulley_Y, 4, 0, 2*Math.PI);
 	ctx2.closePath();
 	ctx2.fill();
 
