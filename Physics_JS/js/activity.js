@@ -58,7 +58,7 @@ var polySide = 10,
     current_planet=planets[i_planet];
 
 var pulley1_X = 500,
-	Pulley2_X = 700,
+	pulley2_X = 700,
 	pulley_Y = 105,
 	pulley_dist = 40,
 	angulardisplacement = 0;    
@@ -234,11 +234,11 @@ function DrawPulleys(){
 	
 	ctx2.fillStyle = "#c0c0c0";
 	ctx2.beginPath();
-	ctx2.arc(Pulley1_X, pulley_Y, 4, 0, 2*Math.PI);
+	ctx2.arc(pulley1_X, pulley_Y, 4, 0, 2*Math.PI);
 	ctx2.closePath();
 	ctx2.fill();
 	ctx2.beginPath();
-	ctx2.arc(Pulley2_X, pulley_Y, 4, 0, 2*Math.PI);
+	ctx2.arc(pulley2_X, pulley_Y, 4, 0, 2*Math.PI);
 	ctx2.closePath();
 	ctx2.fill();
 
