@@ -210,7 +210,7 @@ function DrawPulleys(){
 	ctx2.restore();
 	
 	ctx2.save();
-	ctx2.translate(pulley1_X, pulley_Y);
+	ctx2.translate(pulley2_X, pulley_Y);
 	ctx2.rotate(angulardisplacement);
 	ctx2.beginPath();
 	ctx2.arc(0, 0, pulley_dist, 0, 2*Math.PI);
@@ -228,7 +228,7 @@ function DrawPulleys(){
 	
 	//ctx2.fillStyle = "#000000";
 	ctx2.fillStyle="#242C2C";
-	ctx2.fillRect(pulley1_X-.1*pulley_dist, pulley_Y-0.3*pulley_dist, 1.3*pulley_dist, 0.6*pulley_dist);
+	ctx2.fillRect(pulley1_X-0.1*pulley_dist, pulley_Y-0.3*pulley_dist, 1.3*pulley_dist, 0.6*pulley_dist);
 	ctx2.fillRect(pulley2_X-1.2*pulley_dist, pulley_Y-0.3*pulley_dist, 1.3*pulley_dist, 0.6*pulley_dist);
 	ctx2.fillRect(pulley1_X+1.2*pulley_dist, pulley_Y-0.15*pulley_dist, pulley2_X - pulley1_X - 1.4*pulley_dist, 0.3*pulley_dist);
 	
